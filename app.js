@@ -397,11 +397,11 @@
     }
   }
 
-  // 6-Second Timer Countdown & Capture
-  function startSixSecondCountdown() {
+  // 3-Second Timer Countdown & Capture
+  function startThreeSecondCountdown() {
     if (countdownInterval) clearInterval(countdownInterval);
 
-    let timeLeft = 6;
+    let timeLeft = 3;
     countdownNumber.textContent = timeLeft;
     countdownBadge.classList.remove('hidden');
     startTimerBtn.disabled = true;
@@ -529,13 +529,13 @@
     reader.readAsDataURL(file);
   });
 
-  startTimerBtn.addEventListener('click', startSixSecondCountdown);
+  startTimerBtn.addEventListener('click', startThreeSecondCountdown);
 
   retakeBtn.addEventListener('click', () => {
     cameraResultView.classList.add('hidden');
     cameraLiveView.classList.remove('hidden');
     startCamera();
-    setTimeout(startSixSecondCountdown, 400);
+    setTimeout(startThreeSecondCountdown, 400);
   });
 
   // ══════════════════════════════════════════════════════════════
